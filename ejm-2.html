@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <title>Ejercicio 2</title>
+    <style>
+        .container {
+            display: flex;
+        }
+        .columna {
+            flex: 1;
+            padding: 20px;
+            border: 1px solid black;
+            margin: 5px;
+        }
+        @media (max-width: 600px) {
+            .container {
+                display: block;
+            }
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <div class="columna">
+            <h2>Columna 1</h2>
+            <p>Contenido de la primera columna.</p>
+        </div>
+        <div class="columna">
+            <h2>Columna 2</h2>
+            <p>Contenido de la segunda columna.</p>
+        </div>
+    </div>
+</body>
+</html>

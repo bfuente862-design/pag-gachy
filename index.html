@@ -1,0 +1,115 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>LimayDeco</title>
+  <link rel="stylesheet" href="styles.css" />
+
+</head>
+<body class="fondo-inicio">
+
+  <header>
+    <div class="logo">
+      <span>LimayDeco</span>
+    </div>
+    <nav>
+      <ul>
+        <li><a href="#" onclick="mostrarSeccion(event, 'inicio')">🏠 Inicio</a></li>
+        <li><a href="#" onclick="mostrarSeccion(event, 'plantas')">🌿 Tipos de Plantas</a></li>
+        <li><a href="#" onclick="mostrarSeccion(event, 'nosotros')">👩‍🌾 Sobre Nosotros</a></li>
+        <li><a href="#" onclick="mostrarSeccion(event, 'galeria')">📸 galeria</a></li>
+        <li><a href="#" onclick="mostrarSeccion(event, 'contacto')">📞 Contacto</a></li>
+        
+      </ul>
+    </nav>
+  </header>
+
+  <main>
+    <section id="inicio" class="hero seccion">
+      <h1>Bienvenidos a LimayDeco</h1>
+      <p>Tu espacio natural con plantas, color y vida.</p>
+      <br>
+      <br>
+      <br>
+      <p>En LimayDeco creemos que las plantas son más que decoración: son pequeñas fuentes de energía, color y bienestar. Cada una aporta su magia, transformando cualquier espacio en un lugar cálido, acogedor y lleno de vitalidad.<p> 
+        <br>
+        <br>      
+       <p>Nuestro propósito es ayudarte a rodearte de naturaleza, creando ambientes únicos que transmitan paz y alegría. Porque cuando tu casa florece, vos también lo hacés.</p>
+    </section>
+
+    <section id="plantas" class="seccion" style="display:none;">
+      <h2>Tipos de Plantas</h2>
+      <div class="galeria">
+        <div class="planta">
+          <img src="https://via.placeholder.com/200x200?text=crasas" alt="Suculentas">
+          <h3>Suculentas</h3>
+          <a href="#" class="boton-planta" onclick="toggleImagenes('suculentas')">Ver más</a>
+          <div class="imagenes-extra" id="suculentas" style="display: none;">
+            <img src="suculenta1.jpeg" alt="Suculenta 1">
+            <img src="suculenta2.jpeg" alt="Suculenta 2">
+            <img src="suculenta3.jpeg" alt="Suculenta 3">
+          </div>
+        </div>
+        <div class="planta">
+          <img src="https://via.placeholder.com/200x200?text=Helecho" alt="Cactus">
+          <h3>Cactus</h3>
+          <a href="#" class="boton-planta" onclick="toggleImagenes('cactus')">Ver más</a>
+          <div class="imagenes-extra" id="cactus" style="display: none;">
+            <img src="captus1.jpeg" alt="Cactus 1">
+            <img src="captu2.jpeg" alt="Cactus 2">
+            <img src="captus3.jpeg" alt="Cactus 3">
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section id="nosotros" class="seccion pastel-verde" style="display:none;">
+      <h2>Sobre Nosotros</h2>
+     <p>
+        Nos dedicamos a cultivar con amor, ayudando a las personas a conectar con la naturaleza en su día a día. Cada hoja, cada flor y cada detalle verde es una oportunidad para transformar los espacios en rincones llenos de vida.<p>
+
+     <p>
+       Creemos que rodearse de naturaleza no solo embellece, sino que también aporta calma, frescura y armonía. Por eso, trabajamos para que nuestras plantas lleguen a tu hogar listas para transmitir buenas energías y convertirse en parte de tu historia.<p>
+
+     <p>En LimayDeco no solo vendemos plantas: compartimos pasión, inspiración y el deseo de que cada persona descubra la magia de cuidar y ver crecer algo propio..<p>
+      
+    </section>
+
+    <section id="contacto" class="seccion pastel-rosa" style="display:none;">
+      <h2>Contacto</h2>
+      <div class="datos-contacto">
+        <p><strong>📍 Dirección:</strong> Plaza Huicul, Barrio Norte, Calle Castro</p>
+        <p><strong>📞 Teléfono:</strong> +54 299 630 5188</p>
+        <p><strong>📧 Email:</strong> nataliasvivero434@gmail.com</p>
+        <p><strong>🕒 Horarios:</strong> Lunes a Sábado de 9:00 a 18:00 hs</p>
+        <p><strong>📱 WhatsApp:</strong> <a href="https://wa.me/542996305188" target="_blank">Chatear ahora</a></p>
+      </div>
+    </section>
+    
+    <section id="galeria"class="galeria"style="display-none">
+
+    </section>
+  </main>
+
+  <footer>
+    <p>© 2025 LimayDeco – Hecho con amor y tierra 🌷</p>
+  </footer>
+
+  <script>
+    function mostrarSeccion(event, id) {
+      event.preventDefault();
+      const secciones = document.querySelectorAll('.seccion');
+      secciones.forEach(seccion => {
+        seccion.style.display = (seccion.id === id) ? 'block' : 'none';
+      });
+      document.body.classList.toggle('fondo-inicio', id === 'inicio');
+    }
+
+    function toggleImagenes(id) {
+      const contenedor = document.getElementById(id);
+      contenedor.style.display = (contenedor.style.display === 'none') ? 'flex' : 'none';
+    }
+  </script>
+</body>
+</html>

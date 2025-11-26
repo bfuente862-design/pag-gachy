@@ -1,0 +1,139 @@
+
+html, body {
+    height: 100%;
+    margin: 0;
+    display: flex;
+    flex-direction: column;
+    font-family: Arial, sans-serif;
+  }
+  
+  body {
+    flex: 1;
+    background-color: #ffffff;
+  }
+
+
+
+
+  @media (max-width: 768px) {
+    body {
+        background-color: rgb(98, 224, 165);
+        }
+    }
+
+
+
+
+
+
+
+  
+  main {
+    flex: 1;
+  }
+  
+ 
+  .pastel-rosa {
+    background-color: #ffe4e1;
+  }
+  .pastel-verde {
+    background-color: #e0f7e9;
+  }
+  .fondo-inicio {
+    background-color: #fdf1f1;
+  }
+  
+ 
+  header {
+    background-color: #aed9c7;
+    padding: 1rem;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+  }
+  
+  header .logo span {
+    font-weight: bold;
+    font-size: 1.5rem;
+  }
+  
+  nav ul {
+    list-style: none;
+    display: flex;
+    gap: 1rem;
+    padding: 0;
+    margin: 0;
+  }
+  
+  nav a {
+    text-decoration: none;
+    color: #333;
+  }
+  
+  
+  .seccion {
+    padding: 2rem;
+    text-align: center;
+  }
+  
+ 
+  .galeria {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 2rem;
+  }
+  
+  .planta {
+    background-color: #f9f9f9;
+    border-radius: 10px;
+    padding: 1rem;
+    width: 220px;
+    box-shadow: 0 2px 6px rgba(0, 0, 0, 0.1);
+  }
+  
+  .planta img {
+    width: 100%;
+    border: 3px solid #e0c9a6; 
+    border-radius: 10px;
+  }
+  
+  .boton-planta {
+    display: inline-block;
+    margin-top: 0.5rem;
+    padding: 0.5rem 1rem;
+    background-color: #aed9c7;
+    color: #333;
+    text-decoration: none;
+    border-radius: 5px;
+  }
+  
+  
+  .imagenes-extra {
+    margin-top: 1rem;
+    display: none;
+    flex-wrap: wrap;
+    gap: 1rem;
+    justify-content: center;
+  }
+  
+  .imagenes-extra img {
+    width: 100px;
+    height: 100px;
+    object-fit: cover;
+    border: 3px solid #e0c9a6;
+    border-radius: 8px;
+  }
+  
+  
+  footer {
+    background-color: #2e2e2e;
+    color: #ffffff;
+    text-align: center;
+    padding: 1rem;
+    margin-top: auto;
+  }
+
+
+
+  
